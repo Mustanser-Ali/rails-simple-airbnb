@@ -1,0 +1,9 @@
+<h1>Flats</h1>
+<ul>
+  <% @flats.each do |flat| %>
+    <li>
+      <h2><%= link_to "#{flat.name}", flat_path(flat) %></h2>
+      <p> <i class="fa-solid fa-euro-sign"></i>  <%= "#{flat.price_per_night}" %> (per-night) | <i class="fa-solid fa-user-group"></i> <%= "#{flat.number_of_guests}" %></p>
+    </li>
+  <% end %>
+</ul>
